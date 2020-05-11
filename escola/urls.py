@@ -1,9 +1,9 @@
-from django.urls import path, include
 from rest_framework import routers
-from escola.views import AlunosViewSet, TodosAlunosViewSet
+from escola.views import AlunosViewSet, CursosViewSet, MatriculasViewSet
 
 router = routers.DefaultRouter()
-router.register(r'alunos', AlunosViewSet, basename='Alunos')
-router.register(r'todos/alunos', TodosAlunosViewSet, basename='Alunos')
+router.register('alunos', AlunosViewSet, basename='Alunos')
+router.register('cursos', CursosViewSet, basename='Cursos')
+router.register('matriculas', MatriculasViewSet, basename='Matriculas')
 
-alunos_urls = router.urls
+router_urls = router.urls
